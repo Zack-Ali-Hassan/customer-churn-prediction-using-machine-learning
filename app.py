@@ -51,8 +51,8 @@ def predict():
     inputQuery17 = request.form['PaperlessBilling']
     inputQuery18 = request.form['PaymentMethod']
     inputQuery19 = request.form['tenure']
-    model = pickle.load(open("../Project/Telco-Customer-Churn-Prediction/modeldt.sav", "rb"))
-    # model = pickle.load(open("../Project/Telco-Customer-Churn-Prediction/modellog.sav", "rb"))
+    # model = pickle.load(open("../Project/Telco-Customer-Churn-Prediction/modeldt.sav", "rb"))
+    model = pickle.load(open("../Project/Telco-Customer-Churn-Prediction/modellog.sav", "rb"))
     # model = pickle.load(open("../Project/Telco-Customer-Churn-Prediction/modelrf.sav", "rb"))
     # model = pickle.load(open("../Project/Telco-Customer-Churn-Prediction/modelsvm.sav", "rb"))
     
@@ -81,15 +81,15 @@ def predict():
            'Contract', 'PaperlessBilling', 'PaymentMethod','tenure_group']])
     
     single = model.predict(new_df__dummies.tail(1))
-    probablity = model.predict_proba(new_df__dummies.tail(1))[:,1]
+    # probablity = model.predict_proba(new_df__dummies.tail(1))[:,1]
     
     if single==1:
         o1 = "This customer is churned!!"
-        o2 = "Confidence: {}".format(probablity*100)
+        # o2 = "Confidence: {}".format(probablity*100)
     else:
         o1 = "This customer is not churn!!"
-        o2 = "Confidence: {}".format(probablity*100)
-    return render_template('index.html', output1=o1, output2=o2, 
+        # o2 = "Confidence: {}".format(probablity*100)
+    return render_template('index.html', output1=o1,  
                            SeniorCitizen = request.form['SeniorCitizen'], 
                            MonthlyCharges = request.form['MonthlyCharges'],
                            TotalCharges = request.form['TotalCharges'],

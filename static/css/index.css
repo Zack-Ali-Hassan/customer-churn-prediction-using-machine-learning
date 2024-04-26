@@ -1,11 +1,3 @@
-/**
-* Template Name: Presento
-* Updated: Jan 29 2024 with Bootstrap v5.3.2
-* Template URL: https://bootstrapmade.com/presento-bootstrap-corporate-template/
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
-*/
-
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
@@ -366,7 +358,7 @@ h6 {
 #hero {
   width: 100%;
   height: 100vh;
-  background: url("../img/telco.jpg") top center no-repeat;
+  background: url("../img/telcochurn.png") top center no-repeat;
   background-size: cover;
   position: relative;
   padding-top: 82px;
@@ -375,6 +367,7 @@ h6 {
 #hero:before {
   content: "";
   background: rgba(0, 0, 0, 0.6);
+
   position: absolute;
   bottom: 0;
   top: 0;
@@ -491,82 +484,6 @@ section {
   left: 0;
   right: 0;
   transform: skewY(-3deg);
-}
-
-/*--------------------------------------------------------------
-# Breadcrumbs
---------------------------------------------------------------*/
-.breadcrumbs {
-  padding: 15px 0;
-  background: #2b2b2b;
-  min-height: 40px;
-  margin-top: 82px;
-  color: #fff;
-}
-
-.breadcrumbs h2 {
-  font-size: 28px;
-  font-weight: 500;
-}
-
-.breadcrumbs ol {
-  display: flex;
-  flex-wrap: wrap;
-  list-style: none;
-  padding: 0 0 10px 0;
-  margin: 0;
-  font-size: 14px;
-}
-
-.breadcrumbs ol a {
-  color: #aaaaaa;
-}
-
-.breadcrumbs ol a:hover {
-  color: #fff;
-  transition: 0.3s;
-}
-
-.breadcrumbs ol li+li {
-  padding-left: 10px;
-}
-
-.breadcrumbs ol li+li::before {
-  display: inline-block;
-  padding-right: 10px;
-  color: #e03a3c;
-  content: "/";
-}
-
-/*--------------------------------------------------------------
-# Clients
---------------------------------------------------------------*/
-.clients .swiper-pagination {
-  margin-top: 20px;
-  position: relative;
-}
-
-.clients .swiper-pagination .swiper-pagination-bullet {
-  width: 12px;
-  height: 12px;
-  background-color: #fff;
-  opacity: 1;
-  border: 1px solid #e03a3c;
-}
-
-.clients .swiper-pagination .swiper-pagination-bullet-active {
-  background-color: #e03a3c;
-}
-
-.clients .swiper-slide img {
-  opacity: 0.5;
-  transition: 0.3s;
-  filter: grayscale(100);
-}
-
-.clients .swiper-slide img:hover {
-  opacity: 1;
-  filter: none;
 }
 
 /*--------------------------------------------------------------
@@ -848,6 +765,18 @@ section {
 
 .project .project-form button[type=submit]:hover {
   background: #e35052;
+}
+.project .project-form button[type=reset] {
+  background: #111111;
+  border: 0;
+  padding: 10px 32px;
+  color: #fff;
+  transition: 0.4s;
+  border-radius: 4px;
+}
+
+.project .project-form button[type=reset]:hover {
+  background: #111111;
 }
 
 @keyframes animate-loading {

@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>SOMCHURN</title>
+  <title>SOMTELCHURN</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -33,13 +33,14 @@
   <!-- ======= Header ======= -->
   <header id="header" class="fixed-top d-flex align-items-center">
     <div class="container d-flex align-items-center">
-      <h1 class="logo me-auto"><a href="#hero">SOMCHURN<span>.</span></a></h1>
+      <h1 class="logo me-auto"><a href="#hero">SOMTELCHURN<span>.</span></a></h1>
       <!-- <a href="index.html" class="logo me-auto"><img src="{{url_for('static', filename ='img/fav2.png')}}" alt=""></a> -->
 
       <nav id="navbar" class="navbar order-last order-lg-0">
         <ul>
           <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
           <li><a class="nav-link scrollto" href="#about">About</a></li>
+          <li><a class="nav-link scrollto" href="#visualization">Visualization</a></li>
           <li><a class="nav-link scrollto" href="#project">Project</a></li>
           <li><a class="nav-link scrollto" href="#team">Team</a></li>
         </ul>
@@ -68,54 +69,97 @@
   <main id="main">
 
    
+<!-- ======= About Section ======= -->
+<section id="about" class="about section-bg">
+  <div class="container" data-aos="fade-up">
 
-    <!-- ======= About Section ======= -->
-    <section id="about" class="about section-bg">
-      <div class="container" data-aos="fade-up">
-
-        <div class="row no-gutters">
-          <div class="content col-xl-5 d-flex align-items-stretch">
-            <div class="content">
-              <h3>Telecommunications sector has become one of the main industries in developed countries.</h3>
-              <p>
-                The telecommunications sector has become one of the main industries in 
-                developed countries. Companies are working hard to survive in this competitive 
-                market depending on multiple strategies.<br>
-                Customer churn detection is one of the most crucial study areas in the 
-                telecommunications industry that a firm must address in order to retain current 
-                clients. Churn refers to client attrition as a result of competitors' offers ending 
-                or maybe network problems
-              </p>
-              <a href="#about" class="about-btn"><span>About us</span> <i class="bx bx-chevron-right"></i></a>
+    <div class="row no-gutters">
+      <div class="content col-xl-5 d-flex align-items-stretch">
+        <div class="content">
+          <h3>Telecommunications sector has become one of the main industries in developed countries.</h3>
+          <p>
+            The telecommunications sector has become one of the main industries in 
+            developed countries. Companies are working hard to survive in this competitive 
+            market depending on multiple strategies.<br>
+            Customer churn detection is one of the most crucial study areas in the 
+            telecommunications industry that a firm must address in order to retain current 
+            clients. Churn refers to client attrition as a result of competitors' offers ending 
+            or maybe network problems
+          </p>
+          <a href="#about" class="about-btn"><span>About us</span> <i class="bx bx-chevron-right"></i></a>
+        </div>
+      </div>
+      <div class="col-xl-7 d-flex align-items-stretch">
+        <div class="icon-boxes d-flex flex-column justify-content-center">
+          <img src="{{url_for('static', filename ='img/telco.jpg')}}" class="img-fluid" alt="">
+          <!-- <div class="row">
+            <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="100">
+              <i class="bx bx-receipt"></i>
+              <h4>Corporis voluptates sit</h4>
+              <p>Consequuntur sunt aut quasi enim aliquam quae harum pariatur laboris nisi ut aliquip</p>
             </div>
+            <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="200">
+              <i class="bx bx-cube-alt"></i>
+              <h4>Ullamco laboris nisi</h4>
+              <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt</p>
+            </div>
+            <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="300">
+              <i class="bx bx-images"></i>
+              <h4>Labore consequatur</h4>
+              <p>Aut suscipit aut cum nemo deleniti aut omnis. Doloribus ut maiores omnis facere</p>
+            </div>
+            <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="400">
+              <i class="bx bx-shield"></i>
+              <h4>Beatae veritatis</h4>
+              <p>Expedita veritatis consequuntur nihil tempore laudantium vitae denat pacta</p>
+            </div>
+          </div> -->
+        </div><!-- End .content-->
+      </div>
+    </div>
+
+  </div>
+</section>
+    <!-- ======= Visualization Section ======= -->
+    <section id="visualization" class="visualization ">
+      <div id="carouselExampleIndicators" class="carousel slide">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="../static/img/visualization/Accuracy Comparison of Supervised ML Algorithms.png" class="d-block w-100" alt="...">
           </div>
-          <div class="col-xl-7 d-flex align-items-stretch">
-            <div class="icon-boxes d-flex flex-column justify-content-center">
-              <img src="{{url_for('static', filename ='img/telco.jpg')}}" class="img-fluid" alt="">
-              <!-- <div class="row">
-                <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="100">
-                  <i class="bx bx-receipt"></i>
-                  <h4>Corporis voluptates sit</h4>
-                  <p>Consequuntur sunt aut quasi enim aliquam quae harum pariatur laboris nisi ut aliquip</p>
-                </div>
-                <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="200">
-                  <i class="bx bx-cube-alt"></i>
-                  <h4>Ullamco laboris nisi</h4>
-                  <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt</p>
-                </div>
-                <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="300">
-                  <i class="bx bx-images"></i>
-                  <h4>Labore consequatur</h4>
-                  <p>Aut suscipit aut cum nemo deleniti aut omnis. Doloribus ut maiores omnis facere</p>
-                </div>
-                <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="400">
-                  <i class="bx bx-shield"></i>
-                  <h4>Beatae veritatis</h4>
-                  <p>Expedita veritatis consequuntur nihil tempore laudantium vitae denat pacta</p>
-                </div>
-              </div> -->
-            </div><!-- End .content-->
+          <div class="carousel-item">
+            <img src="../static/img/visualization/logistic_regression_confusion_matrix.png" class="d-block w-100" alt="...">
           </div>
+          <div class="carousel-item">
+            <img src="../static/img/visualization/svm_confusion_matrix.png" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="../static/img/visualization/random_forest_confusion_matrix.png" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="../static/img/visualization/decision_tree_confusion_matrix.png" class="d-block w-100" alt="...">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+      <div class="container" data-aos="fade-up">
+      
+        <div class="row no-gutters">
+        
+          
+         
         </div>
 
       </div>
@@ -123,7 +167,7 @@
 
 
      <!-- ======= Project Section ======= -->
-     <section id="project" class="project">
+     <section id="project" class="project"> 
       <div class="container" data-aos="fade-up">
 
         <div class="section-title">
@@ -137,71 +181,93 @@
             <form action="http://localhost:5000/" method="POST" role="form" class="project-form">
               <div class="row">
                 <div class="col-lg-6 form-group">
+                  <label for="" class="form-label mb-2">SeniorCitizen</label>
                   <input type="text" name="SeniorCitizen" class="form-control" id="SeniorCitizen" value="{{SeniorCitizen}}" placeholder="Senior Citizen" required>
                 </div>
                 <div class="col-lg-6 form-group">
+                  <label for="" class="form-label mb-2">MonthlyCharges</label>
                   <input type="text" name="MonthlyCharges" class="form-control" id="MonthlyCharges" value="{{MonthlyCharges}}" placeholder="Monthly Charges" required>
                 </div>
                 <div class="col-lg-6 form-group">
+                  <label for="" class="form-label mb-2">TotalCharges</label>
                   <input type="text" name="TotalCharges" class="form-control" id="TotalCharges" value="{{TotalCharges}}" placeholder="Total Charges" required>
                 </div>
                 <div class="col-lg-6 form-group">
+                  <label for="" class="form-label mb-2">Gender</label>
                   <input type="text" name="Gender" class="form-control" id="Gender" value="{{Gender}}" placeholder="Gender" required>
                 </div>
                 <div class="col-lg-6 form-group">
+                  <label for="" class="form-label mb-2">Partner</label>
                   <input type="text" name="Partner" class="form-control" id="Partner" value="{{Partner}}" placeholder="Partner" required>
                 </div>
                 <div class="col-lg-6 form-group">
+                  <label for="" class="form-label mb-2">Dependents</label>
                   <input type="text" name="Dependents" class="form-control" id="Dependents" value="{{Dependents}}" placeholder="Dependents" required>
                 </div>
                 <div class="col-lg-6 form-group">
+                  <label for="" class="form-label mb-2">PhoneService</label>
                   <input type="text" name="PhoneService" class="form-control" id="PhoneService" value="{{PhoneService}}" placeholder="Phone Service" required>
                 </div>
                 <div class="col-lg-6 form-group">
+                  <label for="" class="form-label mb-2">MultipleLines</label>
                   <input type="text" name="MultipleLines" class="form-control" id="MultipleLines" value="{{MultipleLines}}" placeholder="Multiple Lines" required>
                 </div>
                 <div class="col-lg-6 form-group">
+                  <label for="" class="form-label mb-2">InternetService</label>
                   <input type="text" name="InternetService" class="form-control" id="InternetService" value="{{InternetService}}" placeholder="Internet Service" required>
                 </div>
                 <div class="col-lg-6 form-group">
+                  <label for="" class="form-label mb-2">OnlineSecurity</label>
                   <input type="text" name="OnlineSecurity" class="form-control" id="OnlineSecurity" value="{{OnlineSecurity}}" placeholder="Online Security" required>
                 </div>
                 <div class="col-lg-6 form-group">
+                  <label for="" class="form-label mb-2">OnlineBackup</label>
                   <input type="text" name="OnlineBackup" class="form-control" id="OnlineBackup" value="{{OnlineBackup}}" placeholder="Online Backup" required>
                 </div>
                 <div class="col-lg-6 form-group">
+                  <label for="" class="form-label mb-2">DeviceProtection</label>
                   <input type="text" name="DeviceProtection" class="form-control" id="DeviceProtection" value="{{DeviceProtection}}" placeholder="Device Protection" required>
                 </div>
                 <div class="col-lg-6 form-group">
+                  <label for="" class="form-label mb-2">TechSupport</label>
                   <input type="text" name="TechSupport" class="form-control" id="TechSupport" value="{{TechSupport}}" placeholder="Tech Support" required>
                 </div>
                 <div class="col-lg-6 form-group">
+                  <label for="" class="form-label mb-2">StreamingTV</label>
                   <input type="text" name="StreamingTV" class="form-control" id="StreamingTV" value="{{StreamingTV}}" placeholder="Streaming TV" required>
                 </div>
                 <div class="col-lg-6 form-group">
+                  <label for="" class="form-label mb-2">StreamingMovies</label>
                   <input type="text" name="StreamingMovies" class="form-control" id="StreamingMovies" value="{{StreamingMovies}}" placeholder="Streaming Movies" required>
                 </div>
                 <div class="col-lg-6 form-group">
+                  <label for="" class="form-label mb-2">Contract</label>
                   <input type="text" name="Contract" class="form-control" id="Contract" value="{{Contract}}" placeholder="Contract" required>
                 </div>
                 <div class="col-lg-6 form-group">
+                  <label for="" class="form-label mb-2">PaperlessBilling</label>
                   <input type="text" name="PaperlessBilling" class="form-control" id="PaperlessBilling" value="{{PaperlessBilling}}" placeholder="Paperless Billing" required>
                 </div>
                 <div class="col-lg-6 form-group">
+                  <label for="" class="form-label mb-2">PaymentMethod</label>
                   <input type="text" name="PaymentMethod" class="form-control" id="PaymentMethod" value="{{PaymentMethod}}" placeholder="Payment Method" required>
                 </div>
                 <div class="col-lg-6 form-group">
+                  <label for="" class="form-label mb-2">tenure</label>
                   <input type="text" name="tenure" class="form-control" id="tenure" value="{{tenure}}" placeholder="Tenure" required>
                 </div>
               </div>
-              
-              <div class="text-start"><button type="submit">Send</button></div>
+              <div class="d-flex justify-content-between">
+                <div class="text-start"><button type="submit">Send</button></div>
+                <button type="reset">Clear</button>
+              </div>
+             
               <div class="alert alert-primary mt-3" role="alert">
                 {{output1}}
               </div>
-              <div class="alert alert-primary" role="alert">
+              <!-- <div class="alert alert-primary" role="alert">
                 {{output2}}
-              </div>
+              </div> -->
             </form>
            
           </div>
@@ -310,13 +376,13 @@
         <div class="row justify-content-between d-flex">
 
           <div class="col-lg-3 col-md-6 footer-contact">
-            <h3>SOMCHURN<span>.</span></h3>
+            <h3>SOMTELCHURN<span>.</span></h3>
             <p>
               KM4 Street <br>
               Hodan, Mogadishu<br>
               Somalia  <br><br>
               <strong>Phone:</strong> +252 619222352<br>
-              <strong>Email:</strong> somchurn@gmail.com<br>
+              <strong>Email:</strong> somtelchurn@gmail.com<br>
             </p>
           </div>
 
@@ -330,15 +396,7 @@
             </ul>
           </div>
 
-         
-
-          <!-- <div class="col-lg-4 col-md-6 footer-newsletter">
-            <h4>Join Our Newsletter</h4>
-            <p>Tamen quem nulla quae legam multos aute sint culpa legam noster magna</p>
-            <form action="" method="post">
-              <input type="email" name="email"><input type="submit" value="Subscribe">
-            </form>
-          </div> -->
+    
 
         </div>
       </div>
@@ -348,12 +406,7 @@
 
       <div class="me-md-auto text-center text-md-start">
       
-        <div class="credits">
-          <!-- All the links in the footer should remain intact. -->
-          <!-- You can delete the links only if you purchased the pro version. -->
-          <!-- Licensing information: https://bootstrapmade.com/license/ -->
-          <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/presento-bootstrap-corporate-template/ -->
-          Developed by <a href="#hero">SOMCHURN</a>
+        <div class="credits">Developed by <a href="#hero">SOMTELCHURN</a>
         </div>
       </div>
       <div class="social-links text-center text-md-end pt-3 pt-md-0">
