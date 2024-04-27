@@ -485,6 +485,29 @@ section {
   right: 0;
   transform: skewY(-3deg);
 }
+/* Visualization */
+.visual-image-container {
+  position: relative;
+  display: inline-block;
+  max-width: 100%; /* Limiting the maximum width to 50% */
+  height: auto; /* Fixed height for the container */
+}
+
+.visual-image {
+  display: block;
+  width: 100%; /* Make the image fill the container */
+  height: auto; /* Maintain aspect ratio */
+}
+
+.visual-image::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Black color with 50% opacity */
+}
 
 /*--------------------------------------------------------------
 # About
