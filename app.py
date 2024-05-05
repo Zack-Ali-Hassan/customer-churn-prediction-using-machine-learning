@@ -52,9 +52,9 @@ def predict():
     inputQuery18 = request.form['PaymentMethod']
     inputQuery19 = request.form['tenure']
     # model = pickle.load(open("../Project/Telco-Customer-Churn-Prediction/modeldt.sav", "rb"))
-    # model = pickle.load(open("../Project/Telco-Customer-Churn-Prediction/modellog.sav", "rb"))
+    model = pickle.load(open("../Project/Telco-Customer-Churn-Prediction/modellog.sav", "rb"))
     # model = pickle.load(open("../Project/Telco-Customer-Churn-Prediction/modelrf.sav", "rb"))
-    model = pickle.load(open("../Project/Telco-Customer-Churn-Prediction/modelsvm.sav", "rb"))
+    # model = pickle.load(open("../Project/Telco-Customer-Churn-Prediction/modelsvm.sav", "rb"))
     
     data = [[inputQuery1, inputQuery2, inputQuery3, inputQuery4, inputQuery5, inputQuery6, inputQuery7, 
              inputQuery8, inputQuery9, inputQuery10, inputQuery11, inputQuery12, inputQuery13, inputQuery14,

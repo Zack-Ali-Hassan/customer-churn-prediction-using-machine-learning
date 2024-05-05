@@ -164,79 +164,138 @@
               <div class="row">
                 <div class="col-lg-6 form-group">
                   <label for="" class="form-label mb-2">SeniorCitizen</label>
-                  <input type="text" name="SeniorCitizen" class="form-control" id="SeniorCitizen" value="{{SeniorCitizen}}" placeholder="Senior Citizen" required>
+                  <select name="SeniorCitizen" class="form-control" id="SeniorCitizen" required>
+                    <option value="1" {% if SeniorCitizen == 1 %}selected{% endif %}>1</option>
+                    <option value="0" {% if SeniorCitizen == 0 %}selected{% endif %}>0</option>
+                </select>
                 </div>
                 <div class="col-lg-6 form-group">
                   <label for="" class="form-label mb-2">MonthlyCharges</label>
-                  <input type="text" name="MonthlyCharges" class="form-control" id="MonthlyCharges" value="{{MonthlyCharges}}" placeholder="Monthly Charges" required>
+                  <input type="number" name="MonthlyCharges" class="form-control" id="MonthlyCharges" value="{{MonthlyCharges}}" placeholder="Monthly Charges" required>
                 </div>
                 <div class="col-lg-6 form-group">
                   <label for="" class="form-label mb-2">TotalCharges</label>
-                  <input type="text" name="TotalCharges" class="form-control" id="TotalCharges" value="{{TotalCharges}}" placeholder="Total Charges" required>
+                  <input type="number" name="TotalCharges" class="form-control" id="TotalCharges" value="{{TotalCharges}}" placeholder="Total Charges" required>
                 </div>
                 <div class="col-lg-6 form-group">
                   <label for="" class="form-label mb-2">Gender</label>
-                  <input type="text" name="Gender" class="form-control" id="Gender" value="{{Gender}}" placeholder="Gender" required>
+                   <select name="Gender" class="form-control" id="Gender" required>
+                    <option value="Female" {% if Gender == 'Female' %}selected{% endif %}>Female</option>
+                    <option value="Male" {% if Gender == 'Male' %}selected{% endif %}>Male</option>
+                </select>
                 </div>
                 <div class="col-lg-6 form-group">
                   <label for="" class="form-label mb-2">Partner</label>
-                  <input type="text" name="Partner" class="form-control" id="Partner" value="{{Partner}}" placeholder="Partner" required>
+                   <select name="Partner" class="form-control" id="Partner" required>
+                    <option value="Yes" {% if Partner == 'Yes' %}selected{% endif %}>Yes</option>
+                    <option value="No" {% if Partner == 'No' %}selected{% endif %}>No</option>
+                  </select>
                 </div>
                 <div class="col-lg-6 form-group">
                   <label for="" class="form-label mb-2">Dependents</label>
-                  <input type="text" name="Dependents" class="form-control" id="Dependents" value="{{Dependents}}" placeholder="Dependents" required>
+                   <select name="Dependents" class="form-control" id="Dependents" required>
+                    <option value="Yes" {% if Dependents == 'Yes' %}selected{% endif %}>Yes</option>
+                    <option value="No" {% if Dependents == 'No' %}selected{% endif %}>No</option>
+                  </select>
                 </div>
                 <div class="col-lg-6 form-group">
                   <label for="" class="form-label mb-2">PhoneService</label>
-                  <input type="text" name="PhoneService" class="form-control" id="PhoneService" value="{{PhoneService}}" placeholder="Phone Service" required>
+                   <select name="PhoneService" class="form-control" id="PhoneService" required>
+                    <option value="Yes" {% if PhoneService == 'Yes' %}selected{% endif %}>Yes</option>
+                    <option value="No" {% if PhoneService == 'No' %}selected{% endif %}>No</option>
+                  </select>
                 </div>
                 <div class="col-lg-6 form-group">
                   <label for="" class="form-label mb-2">MultipleLines</label>
-                  <input type="text" name="MultipleLines" class="form-control" id="MultipleLines" value="{{MultipleLines}}" placeholder="Multiple Lines" required>
+                   <select name="MultipleLines" class="form-control" id="MultipleLines" required>
+                    <option value="Yes" {% if MultipleLines == 'Yes' %}selected{% endif %}>Yes</option>
+                    <option value="No" {% if MultipleLines == 'No' %}selected{% endif %}>No</option>
+                    <option value="No phone service" {% if MultipleLines == 'No phone service' %}selected{% endif %}>No phone service</option>
+                  </select>
                 </div>
                 <div class="col-lg-6 form-group">
                   <label for="" class="form-label mb-2">InternetService</label>
-                  <input type="text" name="InternetService" class="form-control" id="InternetService" value="{{InternetService}}" placeholder="Internet Service" required>
+                   <select name="InternetService" class="form-control" id="InternetService" required>
+                    <option value="DSL" {% if InternetService == 'DSL' %}selected{% endif %}>DSL</option>
+                    <option value="Fiber optic" {% if InternetService == 'Fiber optic' %}selected{% endif %}>Fiber optic</option>
+                    <option value="No" {% if InternetService == 'No' %}selected{% endif %}>No</option>
+                  </select>
                 </div>
                 <div class="col-lg-6 form-group">
                   <label for="" class="form-label mb-2">OnlineSecurity</label>
-                  <input type="text" name="OnlineSecurity" class="form-control" id="OnlineSecurity" value="{{OnlineSecurity}}" placeholder="Online Security" required>
+                   <select name="OnlineSecurity" class="form-control" id="OnlineSecurity" required>
+                    <option value="Yes" {% if OnlineSecurity == 'Yes' %}selected{% endif %}>Yes</option>
+                    <option value="No" {% if OnlineSecurity == 'No' %}selected{% endif %}>No</option>
+                    <option value="No internet service" {% if OnlineSecurity == 'No internet service' %}selected{% endif %}>No internet service</option>
+                  </select>
                 </div>
                 <div class="col-lg-6 form-group">
                   <label for="" class="form-label mb-2">OnlineBackup</label>
-                  <input type="text" name="OnlineBackup" class="form-control" id="OnlineBackup" value="{{OnlineBackup}}" placeholder="Online Backup" required>
+                   <select name="OnlineBackup" class="form-control" id="OnlineBackup" required>
+                    <option value="Yes" {% if OnlineBackup == 'Yes' %}selected{% endif %}>Yes</option>
+                    <option value="No" {% if OnlineBackup == 'No' %}selected{% endif %}>No</option>
+                    <option value="No internet service" {% if OnlineBackup == 'No internet service' %}selected{% endif %}>No internet service</option>
+                  </select>
                 </div>
                 <div class="col-lg-6 form-group">
                   <label for="" class="form-label mb-2">DeviceProtection</label>
-                  <input type="text" name="DeviceProtection" class="form-control" id="DeviceProtection" value="{{DeviceProtection}}" placeholder="Device Protection" required>
+                   <select name="DeviceProtection" class="form-control" id="DeviceProtection" required>
+                    <option value="Yes" {% if DeviceProtection == 'Yes' %}selected{% endif %}>Yes</option>
+                    <option value="No" {% if DeviceProtection == 'No' %}selected{% endif %}>No</option>
+                    <option value="No internet service" {% if DeviceProtection == 'No internet service' %}selected{% endif %}>No internet service</option>
+                  </select>
                 </div>
                 <div class="col-lg-6 form-group">
                   <label for="" class="form-label mb-2">TechSupport</label>
-                  <input type="text" name="TechSupport" class="form-control" id="TechSupport" value="{{TechSupport}}" placeholder="Tech Support" required>
+                   <select name="TechSupport" class="form-control" id="TechSupport" required>
+                    <option value="Yes" {% if TechSupport == 'Yes' %}selected{% endif %}>Yes</option>
+                    <option value="No" {% if TechSupport == 'No' %}selected{% endif %}>No</option>
+                    <option value="No internet service" {% if TechSupport == 'No internet service' %}selected{% endif %}>No internet service</option>
+                  </select>
                 </div>
                 <div class="col-lg-6 form-group">
                   <label for="" class="form-label mb-2">StreamingTV</label>
-                  <input type="text" name="StreamingTV" class="form-control" id="StreamingTV" value="{{StreamingTV}}" placeholder="Streaming TV" required>
+                  <select name="StreamingTV" class="form-control" id="StreamingTV" required>
+                    <option value="Yes" {% if StreamingTV == 'Yes' %}selected{% endif %}>Yes</option>
+                    <option value="No" {% if StreamingTV == 'No' %}selected{% endif %}>No</option>
+                    <option value="No internet service" {% if StreamingTV == 'No internet service' %}selected{% endif %}>No internet service</option>
+                  </select>
                 </div>
                 <div class="col-lg-6 form-group">
                   <label for="" class="form-label mb-2">StreamingMovies</label>
-                  <input type="text" name="StreamingMovies" class="form-control" id="StreamingMovies" value="{{StreamingMovies}}" placeholder="Streaming Movies" required>
+                  <select name="StreamingMovies" class="form-control" id="StreamingMovies" required>
+                    <option value="Yes" {% if StreamingMovies == 'Yes' %}selected{% endif %}>Yes</option>
+                    <option value="No" {% if StreamingMovies == 'No' %}selected{% endif %}>No</option>
+                    <option value="No internet service" {% if StreamingMovies == 'No internet service' %}selected{% endif %}>No internet service</option>
+                  </select>
                 </div>
                 <div class="col-lg-6 form-group">
                   <label for="" class="form-label mb-2">Contract</label>
-                  <input type="text" name="Contract" class="form-control" id="Contract" value="{{Contract}}" placeholder="Contract" required>
+                  <select name="Contract" class="form-control" id="Contract" required>
+                    <option value="Month-to-month" {% if Contract == 'Month-to-month' %}selected{% endif %}>Month-to-month</option>
+                    <option value="One year" {% if Contract == 'One year' %}selected{% endif %}>One year</option>
+                    <option value="Two year" {% if Contract == 'Two year' %}selected{% endif %}>Two year</option>
+                  </select>
                 </div>
                 <div class="col-lg-6 form-group">
                   <label for="" class="form-label mb-2">PaperlessBilling</label>
-                  <input type="text" name="PaperlessBilling" class="form-control" id="PaperlessBilling" value="{{PaperlessBilling}}" placeholder="Paperless Billing" required>
+                  <select name="PaperlessBilling" class="form-control" id="PaperlessBilling" required>
+                    <option value="Yes" {% if PaperlessBilling == 'Yes' %}selected{% endif %}>Yes</option>
+                    <option value="No" {% if PaperlessBilling == 'No' %}selected{% endif %}>No</option>
+                  </select>
                 </div>
                 <div class="col-lg-6 form-group">
                   <label for="" class="form-label mb-2">PaymentMethod</label>
-                  <input type="text" name="PaymentMethod" class="form-control" id="PaymentMethod" value="{{PaymentMethod}}" placeholder="Payment Method" required>
+                  <select name="PaymentMethod" class="form-control" id="PaymentMethod" required>
+                    <option value="Electronic check" {% if PaymentMethod == 'Electronic check' %}selected{% endif %}>Electronic check</option>
+                    <option value="Mailed check" {% if PaymentMethod == 'Mailed check' %}selected{% endif %}>Mailed check</option>
+                    <option value="Credit card (automatic)" {% if PaymentMethod == 'Credit card (automatic)' %}selected{% endif %}>Credit card (automatic)</option>
+                    <option value="Bank transfer (automatic)" {% if PaymentMethod == 'Bank transfer (automatic)' %}selected{% endif %}>Bank transfer (automatic)</option>
+                  </select>
                 </div>
                 <div class="col-lg-6 form-group">
                   <label for="" class="form-label mb-2">tenure</label>
-                  <input type="text" name="tenure" class="form-control" id="tenure" value="{{tenure}}" placeholder="Tenure" required>
+                  <input type="number" name="tenure" class="form-control" id="tenure" value="{{tenure}}" placeholder="Tenure" required>
                 </div>
               </div>
               <div class="d-flex justify-content-between">
@@ -391,7 +450,7 @@
         <div class="credits">Developed by <a href="#hero">SOMTELCHURN</a>
         </div>
       </div>
-      <div class="social-links text-center text-md-end pt-3 pt-md-0">
+      <div class="social-links text-center text-md-end pt-3 pt-md-No">
         <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
         <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
         <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
