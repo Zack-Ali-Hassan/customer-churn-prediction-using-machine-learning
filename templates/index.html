@@ -14,7 +14,9 @@
   <link href="{{url_for('static', filename ='img/fav2.png')}}" rel="apple-touch-icon">
 
   <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+    rel="stylesheet">
 
   <!-- Vendor CSS Files -->
   <link href="{{url_for('static', filename ='vendor/aos/aos.css')}}" rel="stylesheet">
@@ -25,7 +27,7 @@
   <link href="{{url_for('static', filename ='vendor/remixicon/remixicon.css')}}" rel="stylesheet">
   <link href="{{url_for('static', filename ='vendor/swiper/swiper-bundle.min.css')}}" rel="stylesheet">
   <!-- Template Main CSS File -->
-  <link rel="stylesheet" type="text/css"  href="{{ url_for('static', filename='css/index.css') }}" >
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/index.css') }}">
 </head>
 
 <body>
@@ -58,7 +60,7 @@
       <div class="row">
         <div class="col-xl-6">
           <h1>Customer churn prediction based on telecommunication Somalia</h1>
-          <h2>The telecommunication companies in Mogadishu Somalia has challenges about 
+          <h2>The telecommunication companies in Mogadishu Somalia has challenges about
             keeping and the loyalty of their customers to predict either leaving or not.</h2>
           <a href="#about" class="btn-get-started scrollto">Get Started</a>
         </div>
@@ -69,59 +71,75 @@
 
   <main id="main">
 
-   
-<!-- ======= About Section ======= -->
-<section id="about" class="about section-bg">
-  <div class="container" data-aos="fade-up">
 
-    <div class="row no-gutters">
-      <div class="content col-xl-5 d-flex align-items-stretch">
-        <div class="content">
-          <h3>Telecommunications sector has become one of the main industries in developed countries.</h3>
-          <p>
-            The telecommunications sector has become one of the main industries in 
-            developed countries. Companies are working hard to survive in this competitive 
-            market depending on multiple strategies.<br>
-            Customer churn detection is one of the most crucial study areas in the 
-            telecommunications industry that a firm must address in order to retain current 
-            clients. Churn refers to client attrition as a result of competitors' offers ending 
-            or maybe network problems
-          </p>
-          <a href="#about" class="about-btn"><span>About us</span> <i class="bx bx-chevron-right"></i></a>
+    <!-- ======= About Section ======= -->
+    <section id="about" class="about section-bg">
+      <div class="container" data-aos="fade-up">
+
+        <div class="row no-gutters">
+          <div class="content col-xl-5 d-flex align-items-stretch">
+            <div class="content">
+              <h3>A Machine Learning Approach to Predicting Customer Churn</h3>
+              <p>
+                The Telecommunication Customer Churn Prediction System forecasts customer departure likelihoods for
+                service providers. It aggregates and processes data from diverse sources, including customer
+                interactions, usage patterns, and billing details. After refining the data, machine learning techniques
+                are applied to identify key churn factors like service satisfaction and interaction quality. Techniques
+                such as Logistic Regression and Random Forest are utilized to develop predictive models. The
+                best-performing model is then implemented for practical use. Telecom companies can thus proactively
+                offer personalized services and promotions to retain at-risk customers. However, the system faces
+                challenges like ensuring data privacy, adapting to dynamic market conditions, and integrating with
+                existing infrastructures. Overall, this system is essential for telecoms aiming to improve customer
+                retention and stay competitive.
+              </p>
+              <a href="#about" class="about-btn"><span>About us</span> <i class="bx bx-chevron-right"></i></a>
+            </div>
+          </div>
+          <div class="col-xl-7 d-flex align-items-stretch">
+            <div class="icon-boxes d-flex flex-column justify-content-center">
+              <img src="{{url_for('static', filename ='img/Customer Churn image.webp')}}" class="img-fluid" alt="">
+
+            </div><!-- End .content-->
+          </div>
         </div>
-      </div>
-      <div class="col-xl-7 d-flex align-items-stretch">
-        <div class="icon-boxes d-flex flex-column justify-content-center">
-          <img src="{{url_for('static', filename ='img/telco.jpg')}}" class="img-fluid" alt="">
-       
-        </div><!-- End .content-->
-      </div>
-    </div>
 
-  </div>
-</section>
+      </div>
+    </section>
     <!-- ======= Visualization Section ======= -->
     <section id="visualization" class="visualization visual-image-container">
       <div id="carouselExampleIndicators" class="carousel slide">
         <div class="carousel-indicators">
-          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
-          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4" aria-label="Slide 5"></button>
-          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="5" aria-label="Slide 6"></button>
-          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="6" aria-label="Slide 7"></button>
-          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="7" aria-label="Slide 8"></button>
-          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="8" aria-label="Slide 9"></button>
-          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="9" aria-label="Slide 10"></button>
-          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="10" aria-label="Slide 11"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+            aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+            aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+            aria-label="Slide 3"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3"
+            aria-label="Slide 4"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4"
+            aria-label="Slide 5"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="5"
+            aria-label="Slide 6"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="6"
+            aria-label="Slide 7"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="7"
+            aria-label="Slide 8"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="8"
+            aria-label="Slide 9"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="9"
+            aria-label="Slide 10"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="10"
+            aria-label="Slide 11"></button>
         </div>
         <div class="carousel-inner visual-image">
           <div class="carousel-item active">
-            <img  src="../static/img/visualization/Accuracy Comparison of Supervised ML Algorithms.png" class="d-block w-100" alt="...">
+            <img src="../static/img/visualization/Accuracy Comparison of Supervised ML Algorithms.png"
+              class="d-block w-100" alt="...">
           </div>
           <div class="carousel-item">
-            <img  src="../static/img/visualization/logistic_regression_confusion_matrix.png" class="d-block w-100" alt="...">
+            <img src="../static/img/visualization/logistic_regression_confusion_matrix.png" class="d-block w-100"
+              alt="...">
           </div>
           <div class="carousel-item">
             <img src="../static/img/visualization/svm_confusion_matrix.png" class="d-block w-100" alt="...">
@@ -151,34 +169,36 @@
             <img src="../static/img/visualization/PaymentMethod.png" class="d-block w-100" alt="...">
           </div>
         </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+          data-bs-slide="prev">
           <span class="carousel-control-prev-icon" aria-hidden="true"></span>
           <span class="visually-hidden">Previous</span>
         </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+          data-bs-slide="next">
           <span class="carousel-control-next-icon" aria-hidden="true"></span>
           <span class="visually-hidden">Next</span>
         </button>
       </div>
       <div class="container" data-aos="fade-up">
-      
+
         <div class="row no-gutters">
-        
-          
-         
+
+
+
         </div>
 
       </div>
     </section><!-- End About Section -->
 
 
-     <!-- ======= Project Section ======= -->
-     <section id="project" class="project"> 
+    <!-- ======= Project Section ======= -->
+    <section id="project" class="project">
       <div class="container" data-aos="fade-up">
 
         <div class="section-title">
           <h2>Project</h2>
-          <p>Customer churn prediction based on  telecommunication somalia.</p>
+          <p>Customer churn prediction based on telecommunication somalia.</p>
         </div>
 
         <div class="row" data-aos="fade-up" data-aos-delay="100">
@@ -189,143 +209,159 @@
                 <div class="col-lg-6 form-group">
                   <label for="" class="form-label mb-2">SeniorCitizen</label>
                   <select name="SeniorCitizen" class="form-control" id="SeniorCitizen" required>
-                    <option value="1" {% if SeniorCitizen == 1 %}selected{% endif %}>1</option>
-                    <option value="0" {% if SeniorCitizen == 0 %}selected{% endif %}>0</option>
-                </select>
+                    <option value="1" {% if SeniorCitizen==1 %}selected{% endif %}>1</option>
+                    <option value="0" {% if SeniorCitizen==0 %}selected{% endif %}>0</option>
+                  </select>
                 </div>
                 <div class="col-lg-6 form-group">
                   <label for="" class="form-label mb-2">MonthlyCharges</label>
-                  <input type="number" name="MonthlyCharges" class="form-control" id="MonthlyCharges" value="{{MonthlyCharges}}" step="any" placeholder="Monthly Charges" required>
+                  <input type="number" name="MonthlyCharges" class="form-control" id="MonthlyCharges"
+                    value="{{MonthlyCharges}}" step="any" placeholder="Monthly Charges" required>
                 </div>
                 <div class="col-lg-6 form-group">
                   <label for="" class="form-label mb-2">TotalCharges</label>
-                  <input type="number" name="TotalCharges" class="form-control" id="TotalCharges" value="{{TotalCharges}}" step="any" placeholder="Total Charges" required>
+                  <input type="number" name="TotalCharges" class="form-control" id="TotalCharges"
+                    value="{{TotalCharges}}" step="any" placeholder="Total Charges" required>
                 </div>
                 <div class="col-lg-6 form-group">
                   <label for="" class="form-label mb-2">Gender</label>
-                   <select name="Gender" class="form-control" id="Gender" required>
-                    <option value="Female" {% if Gender == 'Female' %}selected{% endif %}>Female</option>
-                    <option value="Male" {% if Gender == 'Male' %}selected{% endif %}>Male</option>
-                </select>
+                  <select name="Gender" class="form-control" id="Gender" required>
+                    <option value="Female" {% if Gender=='Female' %}selected{% endif %}>Female</option>
+                    <option value="Male" {% if Gender=='Male' %}selected{% endif %}>Male</option>
+                  </select>
                 </div>
                 <div class="col-lg-6 form-group">
                   <label for="" class="form-label mb-2">Partner</label>
-                   <select name="Partner" class="form-control" id="Partner" required>
-                    <option value="Yes" {% if Partner == 'Yes' %}selected{% endif %}>Yes</option>
-                    <option value="No" {% if Partner == 'No' %}selected{% endif %}>No</option>
+                  <select name="Partner" class="form-control" id="Partner" required>
+                    <option value="Yes" {% if Partner=='Yes' %}selected{% endif %}>Yes</option>
+                    <option value="No" {% if Partner=='No' %}selected{% endif %}>No</option>
                   </select>
                 </div>
                 <div class="col-lg-6 form-group">
                   <label for="" class="form-label mb-2">Dependents</label>
-                   <select name="Dependents" class="form-control" id="Dependents" required>
-                    <option value="Yes" {% if Dependents == 'Yes' %}selected{% endif %}>Yes</option>
-                    <option value="No" {% if Dependents == 'No' %}selected{% endif %}>No</option>
+                  <select name="Dependents" class="form-control" id="Dependents" required>
+                    <option value="Yes" {% if Dependents=='Yes' %}selected{% endif %}>Yes</option>
+                    <option value="No" {% if Dependents=='No' %}selected{% endif %}>No</option>
                   </select>
                 </div>
                 <div class="col-lg-6 form-group">
                   <label for="" class="form-label mb-2">PhoneService</label>
-                   <select name="PhoneService" class="form-control" id="PhoneService" required>
-                    <option value="Yes" {% if PhoneService == 'Yes' %}selected{% endif %}>Yes</option>
-                    <option value="No" {% if PhoneService == 'No' %}selected{% endif %}>No</option>
+                  <select name="PhoneService" class="form-control" id="PhoneService" required>
+                    <option value="Yes" {% if PhoneService=='Yes' %}selected{% endif %}>Yes</option>
+                    <option value="No" {% if PhoneService=='No' %}selected{% endif %}>No</option>
                   </select>
                 </div>
                 <div class="col-lg-6 form-group">
                   <label for="" class="form-label mb-2">MultipleLines</label>
-                   <select name="MultipleLines" class="form-control" id="MultipleLines" required>
-                    <option value="Yes" {% if MultipleLines == 'Yes' %}selected{% endif %}>Yes</option>
-                    <option value="No" {% if MultipleLines == 'No' %}selected{% endif %}>No</option>
-                    <option value="No phone service" {% if MultipleLines == 'No phone service' %}selected{% endif %}>No phone service</option>
+                  <select name="MultipleLines" class="form-control" id="MultipleLines" required>
+                    <option value="Yes" {% if MultipleLines=='Yes' %}selected{% endif %}>Yes</option>
+                    <option value="No" {% if MultipleLines=='No' %}selected{% endif %}>No</option>
+                    <option value="No phone service" {% if MultipleLines=='No phone service' %}selected{% endif %}>No
+                      phone service</option>
                   </select>
                 </div>
                 <div class="col-lg-6 form-group">
                   <label for="" class="form-label mb-2">InternetService</label>
-                   <select name="InternetService" class="form-control" id="InternetService" required>
-                    <option value="DSL" {% if InternetService == 'DSL' %}selected{% endif %}>DSL</option>
-                    <option value="Fiber optic" {% if InternetService == 'Fiber optic' %}selected{% endif %}>Fiber optic</option>
-                    <option value="No" {% if InternetService == 'No' %}selected{% endif %}>No</option>
+                  <select name="InternetService" class="form-control" id="InternetService" required>
+                    <option value="DSL" {% if InternetService=='DSL' %}selected{% endif %}>DSL</option>
+                    <option value="Fiber optic" {% if InternetService=='Fiber optic' %}selected{% endif %}>Fiber optic
+                    </option>
+                    <option value="No" {% if InternetService=='No' %}selected{% endif %}>No</option>
                   </select>
                 </div>
                 <div class="col-lg-6 form-group">
                   <label for="" class="form-label mb-2">OnlineSecurity</label>
-                   <select name="OnlineSecurity" class="form-control" id="OnlineSecurity" required>
-                    <option value="Yes" {% if OnlineSecurity == 'Yes' %}selected{% endif %}>Yes</option>
-                    <option value="No" {% if OnlineSecurity == 'No' %}selected{% endif %}>No</option>
-                    <option value="No internet service" {% if OnlineSecurity == 'No internet service' %}selected{% endif %}>No internet service</option>
+                  <select name="OnlineSecurity" class="form-control" id="OnlineSecurity" required>
+                    <option value="Yes" {% if OnlineSecurity=='Yes' %}selected{% endif %}>Yes</option>
+                    <option value="No" {% if OnlineSecurity=='No' %}selected{% endif %}>No</option>
+                    <option value="No internet service" {% if OnlineSecurity=='No internet service' %}selected{% endif
+                      %}>No internet service</option>
                   </select>
                 </div>
                 <div class="col-lg-6 form-group">
                   <label for="" class="form-label mb-2">OnlineBackup</label>
-                   <select name="OnlineBackup" class="form-control" id="OnlineBackup" required>
-                    <option value="Yes" {% if OnlineBackup == 'Yes' %}selected{% endif %}>Yes</option>
-                    <option value="No" {% if OnlineBackup == 'No' %}selected{% endif %}>No</option>
-                    <option value="No internet service" {% if OnlineBackup == 'No internet service' %}selected{% endif %}>No internet service</option>
+                  <select name="OnlineBackup" class="form-control" id="OnlineBackup" required>
+                    <option value="Yes" {% if OnlineBackup=='Yes' %}selected{% endif %}>Yes</option>
+                    <option value="No" {% if OnlineBackup=='No' %}selected{% endif %}>No</option>
+                    <option value="No internet service" {% if OnlineBackup=='No internet service' %}selected{% endif %}>
+                      No internet service</option>
                   </select>
                 </div>
                 <div class="col-lg-6 form-group">
                   <label for="" class="form-label mb-2">DeviceProtection</label>
-                   <select name="DeviceProtection" class="form-control" id="DeviceProtection" required>
-                    <option value="Yes" {% if DeviceProtection == 'Yes' %}selected{% endif %}>Yes</option>
-                    <option value="No" {% if DeviceProtection == 'No' %}selected{% endif %}>No</option>
-                    <option value="No internet service" {% if DeviceProtection == 'No internet service' %}selected{% endif %}>No internet service</option>
+                  <select name="DeviceProtection" class="form-control" id="DeviceProtection" required>
+                    <option value="Yes" {% if DeviceProtection=='Yes' %}selected{% endif %}>Yes</option>
+                    <option value="No" {% if DeviceProtection=='No' %}selected{% endif %}>No</option>
+                    <option value="No internet service" {% if DeviceProtection=='No internet service' %}selected{% endif
+                      %}>No internet service</option>
                   </select>
                 </div>
                 <div class="col-lg-6 form-group">
                   <label for="" class="form-label mb-2">TechSupport</label>
-                   <select name="TechSupport" class="form-control" id="TechSupport" required>
-                    <option value="Yes" {% if TechSupport == 'Yes' %}selected{% endif %}>Yes</option>
-                    <option value="No" {% if TechSupport == 'No' %}selected{% endif %}>No</option>
-                    <option value="No internet service" {% if TechSupport == 'No internet service' %}selected{% endif %}>No internet service</option>
+                  <select name="TechSupport" class="form-control" id="TechSupport" required>
+                    <option value="Yes" {% if TechSupport=='Yes' %}selected{% endif %}>Yes</option>
+                    <option value="No" {% if TechSupport=='No' %}selected{% endif %}>No</option>
+                    <option value="No internet service" {% if TechSupport=='No internet service' %}selected{% endif %}>
+                      No internet service</option>
                   </select>
                 </div>
                 <div class="col-lg-6 form-group">
                   <label for="" class="form-label mb-2">StreamingTV</label>
                   <select name="StreamingTV" class="form-control" id="StreamingTV" required>
-                    <option value="Yes" {% if StreamingTV == 'Yes' %}selected{% endif %}>Yes</option>
-                    <option value="No" {% if StreamingTV == 'No' %}selected{% endif %}>No</option>
-                    <option value="No internet service" {% if StreamingTV == 'No internet service' %}selected{% endif %}>No internet service</option>
+                    <option value="Yes" {% if StreamingTV=='Yes' %}selected{% endif %}>Yes</option>
+                    <option value="No" {% if StreamingTV=='No' %}selected{% endif %}>No</option>
+                    <option value="No internet service" {% if StreamingTV=='No internet service' %}selected{% endif %}>
+                      No internet service</option>
                   </select>
                 </div>
                 <div class="col-lg-6 form-group">
                   <label for="" class="form-label mb-2">StreamingMovies</label>
                   <select name="StreamingMovies" class="form-control" id="StreamingMovies" required>
-                    <option value="Yes" {% if StreamingMovies == 'Yes' %}selected{% endif %}>Yes</option>
-                    <option value="No" {% if StreamingMovies == 'No' %}selected{% endif %}>No</option>
-                    <option value="No internet service" {% if StreamingMovies == 'No internet service' %}selected{% endif %}>No internet service</option>
+                    <option value="Yes" {% if StreamingMovies=='Yes' %}selected{% endif %}>Yes</option>
+                    <option value="No" {% if StreamingMovies=='No' %}selected{% endif %}>No</option>
+                    <option value="No internet service" {% if StreamingMovies=='No internet service' %}selected{% endif
+                      %}>No internet service</option>
                   </select>
                 </div>
                 <div class="col-lg-6 form-group">
                   <label for="" class="form-label mb-2">Contract</label>
                   <select name="Contract" class="form-control" id="Contract" required>
-                    <option value="Month-to-month" {% if Contract == 'Month-to-month' %}selected{% endif %}>Month-to-month</option>
-                    <option value="One year" {% if Contract == 'One year' %}selected{% endif %}>One year</option>
-                    <option value="Two year" {% if Contract == 'Two year' %}selected{% endif %}>Two year</option>
+                    <option value="Month-to-month" {% if Contract=='Month-to-month' %}selected{% endif %}>Month-to-month
+                    </option>
+                    <option value="One year" {% if Contract=='One year' %}selected{% endif %}>One year</option>
+                    <option value="Two year" {% if Contract=='Two year' %}selected{% endif %}>Two year</option>
                   </select>
                 </div>
                 <div class="col-lg-6 form-group">
                   <label for="" class="form-label mb-2">PaperlessBilling</label>
                   <select name="PaperlessBilling" class="form-control" id="PaperlessBilling" required>
-                    <option value="Yes" {% if PaperlessBilling == 'Yes' %}selected{% endif %}>Yes</option>
-                    <option value="No" {% if PaperlessBilling == 'No' %}selected{% endif %}>No</option>
+                    <option value="Yes" {% if PaperlessBilling=='Yes' %}selected{% endif %}>Yes</option>
+                    <option value="No" {% if PaperlessBilling=='No' %}selected{% endif %}>No</option>
                   </select>
                 </div>
                 <div class="col-lg-6 form-group">
                   <label for="" class="form-label mb-2">PaymentMethod</label>
                   <select name="PaymentMethod" class="form-control" id="PaymentMethod" required>
-                    <option value="Electronic check" {% if PaymentMethod == 'Electronic check' %}selected{% endif %}>Electronic check</option>
-                    <option value="Mailed check" {% if PaymentMethod == 'Mailed check' %}selected{% endif %}>Mailed check</option>
-                    <option value="Credit card (automatic)" {% if PaymentMethod == 'Credit card (automatic)' %}selected{% endif %}>Credit card (automatic)</option>
-                    <option value="Bank transfer (automatic)" {% if PaymentMethod == 'Bank transfer (automatic)' %}selected{% endif %}>Bank transfer (automatic)</option>
+                    <option value="Electronic check" {% if PaymentMethod=='Electronic check' %}selected{% endif %}>
+                      Electronic check</option>
+                    <option value="Mailed check" {% if PaymentMethod=='Mailed check' %}selected{% endif %}>Mailed check
+                    </option>
+                    <option value="Credit card (automatic)" {% if PaymentMethod=='Credit card (automatic)' %}selected{%
+                      endif %}>Credit card (automatic)</option>
+                    <option value="Bank transfer (automatic)" {% if PaymentMethod=='Bank transfer (automatic)'
+                      %}selected{% endif %}>Bank transfer (automatic)</option>
                   </select>
                 </div>
                 <div class="col-lg-6 form-group">
                   <label for="" class="form-label mb-2">tenure</label>
-                  <input type="number" name="tenure" class="form-control" id="tenure" value="{{tenure}}" placeholder="Tenure" required>
+                  <input type="number" name="tenure" class="form-control" id="tenure" value="{{tenure}}"
+                    placeholder="Tenure" required>
                 </div>
               </div>
               <div class="d-flex justify-content-between">
                 <div class="text-start"><button type="submit">Send</button></div>
               </div>
-             
+
               <div class="alert alert-primary mt-3" role="alert">
                 {{output1}}
               </div>
@@ -333,11 +369,11 @@
                 {{output2}}
               </div> -->
             </form>
-           
+
           </div>
 
     </section>
-    <!-- End Project Section --> 
+    <!-- End Project Section -->
 
 
     <!-- ======= Team Section ======= -->
@@ -354,7 +390,7 @@
           <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
             <div class="member" data-aos="fade-up" data-aos-delay="100">
               <div class="member-img">
-                <img src=" {{url_for('static', filename ='img/team/team-1.jpeg')}} " class="img-fluid" alt="">
+                <img src=" {{url_for('static', filename ='img/team/team-11.jpeg')}} " class="img-fluid" alt="">
                 <div class="social">
                   <a href=""><i class="bi bi-twitter"></i></a>
                   <a href=""><i class="bi bi-facebook"></i></a>
@@ -428,7 +464,7 @@
       </div>
     </section><!-- End Team Section -->
 
-   
+
 
   </main><!-- End #main -->
 
@@ -444,7 +480,7 @@
             <p>
               KM4 Street <br>
               Hodan, Mogadishu<br>
-              Somalia  <br><br>
+              Somalia <br><br>
               <strong>Phone:</strong> +252 619222352<br>
               <strong>Email:</strong> somtelchurn@gmail.com<br>
             </p>
@@ -460,7 +496,7 @@
             </ul>
           </div>
 
-    
+
 
         </div>
       </div>
@@ -469,7 +505,7 @@
     <div class="container d-md-flex py-4">
 
       <div class="me-md-auto text-center text-md-start">
-      
+
         <div class="credits">Developed by <a href="#hero">SOMTELCHURN</a>
         </div>
       </div>
@@ -482,7 +518,8 @@
     </div>
   </footer><!-- End Footer -->
 
-  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a>
 
   <!-- Vendor JS Files -->
   <script src="{{ url_for('static', filename ='vendor/purecounter/purecounter_vanilla.js') }}"></script>
@@ -492,7 +529,7 @@
   <script src="{{ url_for('static', filename ='vendor/isotope-layout/isotope.pkgd.min.js') }}"></script>
   <script src="{{ url_for('static', filename ='vendor/swiper/swiper-bundle.min.js') }}"></script>
   <script src="{{ url_for('static', filename ='vendor/php-email-form/validate.js') }}"></script>
-   <!-- Template Main JS File -->
+  <!-- Template Main JS File -->
   <script src="{{ url_for('static', filename ='js/main.js') }}"></script>
 
 </body>
