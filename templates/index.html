@@ -215,13 +215,13 @@
                 </div>
                 <div class="col-lg-6 form-group">
                   <label for="" class="form-label mb-2">MonthlyCharges</label>
-                  <input type="number" name="MonthlyCharges" class="form-control" id="MonthlyCharges"
-                    value="{{MonthlyCharges}}" step="any" placeholder="Monthly Charges" required>
+                  <input type="text" name="MonthlyCharges" class="form-control" id="MonthlyCharges"
+                    value="{{MonthlyCharges}}" step="any" placeholder="Monthly Charges" required oninput="validateInput(this)">
                 </div>
                 <div class="col-lg-6 form-group">
                   <label for="" class="form-label mb-2">TotalCharges</label>
-                  <input type="number" name="TotalCharges" class="form-control" id="TotalCharges"
-                    value="{{TotalCharges}}" step="any" placeholder="Total Charges" required>
+                  <input type="text" name="TotalCharges" class="form-control" id="TotalCharges"
+                    value="{{TotalCharges}}" step="any" placeholder="Total Charges" required oninput="validateInput(this)">
                 </div>
                 <div class="col-lg-6 form-group">
                   <label for="" class="form-label mb-2">Gender</label>
@@ -354,8 +354,8 @@
                 </div>
                 <div class="col-lg-6 form-group">
                   <label for="" class="form-label mb-2">tenure</label>
-                  <input type="number" name="tenure" class="form-control" id="tenure" value="{{tenure}}"
-                    placeholder="Tenure" required>
+                  <input type="text" name="tenure" class="form-control" id="tenure" value="{{tenure}}"
+                    placeholder="Tenure" required oninput="validateUserInput(this)">
                 </div>
               </div>
               <div class="d-flex justify-content-between">
@@ -521,6 +521,7 @@
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
       class="bi bi-arrow-up-short"></i></a>
 
+     
   <!-- Vendor JS Files -->
   <script src="{{ url_for('static', filename ='vendor/purecounter/purecounter_vanilla.js') }}"></script>
   <script src="{{ url_for('static', filename ='vendor/aos/aos.js') }}"></script>
@@ -531,7 +532,8 @@
   <script src="{{ url_for('static', filename ='vendor/php-email-form/validate.js') }}"></script>
   <!-- Template Main JS File -->
   <script src="{{ url_for('static', filename ='js/main.js') }}"></script>
-
+  <script src="{{ url_for('static', filename ='js/valid.js') }}"></script>
+ 
 </body>
 
 </html>
