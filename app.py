@@ -51,10 +51,7 @@ def predict():
     inputQuery17 = request.form['PaperlessBilling']
     inputQuery18 = request.form['PaymentMethod']
     inputQuery19 = request.form['tenure']
-    # model = pickle.load(open("../Project/Telco-Customer-Churn-Prediction/modeldt.sav", "rb"))
-    model = pickle.load(open("../Project/Telco-Customer-Churn-Prediction/modellog.sav", "rb"))
-    # model = pickle.load(open("../Project/Telco-Customer-Churn-Prediction/modelrf.sav", "rb"))
-    # model = pickle.load(open("../Project/Telco-Customer-Churn-Prediction/modelsvm.sav", "rb"))
+    
     
     data = [[inputQuery1, inputQuery2, inputQuery3, inputQuery4, inputQuery5, inputQuery6, inputQuery7, 
              inputQuery8, inputQuery9, inputQuery10, inputQuery11, inputQuery12, inputQuery13, inputQuery14,
@@ -69,7 +66,8 @@ def predict():
     labels = ["{0} - {1}".format(i, i + 11) for i in range(1, 72, 12)]
     
     df_2['tenure_group'] = pd.cut(df_2.tenure.astype(int), range(1, 80, 12), right=False, labels=labels)
-    #drop column customerID and tenure
+
+    #drop column tenure
     df_2.drop(columns= ['tenure'], axis=1, inplace=True) 
     df_2.SeniorCitizen = pd.to_numeric(df_2.SeniorCitizen, errors='coerce')
     df_2.MonthlyCharges = pd.to_numeric(df_2.MonthlyCharges, errors='coerce')
@@ -80,15 +78,18 @@ def predict():
            'DeviceProtection', 'TechSupport', 'StreamingTV', 'StreamingMovies',
            'Contract', 'PaperlessBilling', 'PaymentMethod','tenure_group']])
     
+    # Load model
+    # model = pickle.load(open("../Project/Telco-Customer-Churn-Prediction/modeldt.sav", "rb"))
+    model = pickle.load(open("../Project/Telco-Customer-Churn-Prediction/modellog.sav", "rb"))
+    # model = pickle.load(open("../Project/Telco-Customer-Churn-Prediction/modelrf.sav", "rb"))
+    # model = pickle.load(open("../Project/Telco-Customer-Churn-Prediction/modelsvm.sav", "rb"))
+
     single = model.predict(new_df__dummies.tail(1))
-    # probablity = model.predict_proba(new_df__dummies.tail(1))[:,1]
     
     if single==1:
-        o1 = "This customer is churned!!"
-        # o2 = "Confidence: {}".format(probablity*100)
+        o1 = "This customer is churned!!."
     else:
-        o1 = "This customer is not churn!!"
-        # o2 = "Confidence: {}".format(probablity*100)
+        o1 = "This customer is not churn."
     return render_template('index.html', output1=o1,  
                            SeniorCitizen = request.form['SeniorCitizen'], 
                            MonthlyCharges = request.form['MonthlyCharges'],
