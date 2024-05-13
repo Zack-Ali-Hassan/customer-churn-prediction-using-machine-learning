@@ -1,14 +1,29 @@
-from flask import Flask,render_template,request, url_for
+from flask import Flask,render_template,request, url_for,redirect,session
+import mysql.connector
 import pandas as pd
 import pickle
 app =Flask(__name__)
+app.secret_key = "zxsdasdasdasdsd"
 
+# load your data
 df_1=pd.read_csv("../Project/Telco-Customer-Churn-Prediction/first_telc.csv")
+
+# MySQL configurations
+mysql_config = {
+    'host': 'localhost',
+    'user': 'root',
+    'password': '',
+    'database': 'customer_churn'
+}
+
+
 @app.route("/")
 def loadPage():
-	return render_template('index.html', query="")
+      if 'username' in session:
+        return render_template('index.html', query="")
+      return redirect(url_for('login'))
 
-@app.route("/", methods=['POST'])
+@app.route("/predict", methods=['POST'])
 def predict():
 
     '''
