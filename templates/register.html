@@ -22,10 +22,23 @@
             <div class="card mb-0">
               <div class="card-body">
                 <p class="text-center" style="color : black; font-weight: bold; font-size : 30px">Register</p>
-                <form action="" method="post">
+                <div class="row">
+                  <div class="col-sm-12">
+                      <div class="alert alert-success d-none" role="alert">
+                          This is a success alert—check it out!
+                      </div>
+                      {% if error %}
+                      <div class="alert alert-danger" role="alert">
+                          {{ error }}!
+                      </div>
+                      {% endif %}
+                      
+                  </div>
+              </div>
+                <form method="post" action="{{ url_for('signup') }}">
                   <div class="mb-3">
-                    <label for="exampleInputtext1" class="form-label">Name</label>
-                    <input type="text" class="form-control" id="name" name="name" aria-describedby="textHelp" placeholder ="Enter name">
+                    <label for="exampleInputtext1" class="form-label">Full Name</label>
+                    <input type="text" class="form-control" id="name" name="name" aria-describedby="textHelp" placeholder ="Enter fullname">
                   </div>
                   <div class="mb-3">
                     <label for="exampleInputEmail1" class="form-label">Email</label>
@@ -35,7 +48,7 @@
                     <label for="exampleInputPassword1" class="form-label">Password</label>
                     <input type="password" class="form-control" id="password" name="password" placeholder = "Enter password">
                   </div>
-                  {% with messages = get_flashed_messages() %}
+                  <!-- {% with messages = get_flashed_messages() %}
                   {% if messages %}
                       {% for message in messages %}
                           <div class="alert alert-warning" role="alert">
@@ -43,11 +56,12 @@
                           </div>
                       {% endfor %}
                   {% endif %}
-              {% endwith %}
-                  <a href="" class="btn btn-info w-100 py-8 fs-0 mb-4 rounded-2">Sign In</a>
+              {% endwith %} -->
+                  <button class="btn btn-info w-100 py-8 fs-0 fw-bold mb-4 rounded-2"
+                  type="submit">Sign In</button>
                   <div class="d-flex align-items-center justify-content-center">
                     <p class="fs-0 mb-0 fw-bold">Already have an Account?</p>
-                    <a class="text-info fw-bold ms-2" href="">Log In</a>
+                    <a class="text-info fw-bold ms-2" href="{{ url_for('login') }}" >Log In</a>
                   </div>
                 </form>
               </div>
