@@ -1,7 +1,9 @@
 from flask import Flask,render_template,request, url_for,redirect,session
 import mysql.connector
+import re
 import pandas as pd
 import pickle
+
 app =Flask(__name__)
 app.secret_key = "zxsdasdasdasdsd"
 
@@ -22,6 +24,61 @@ def loadPage():
       if 'username' in session:
         return render_template('index.html', query="")
       return redirect(url_for('login'))
+
+@app.route('/login', methods=['GET', 'POST'])
+def login():
+     if request.method == 'POST':
+          email = request.form['email']
+          password = request.form['password']
+          conn = mysql.connector.connect(**mysql_config)
+          cursor = conn.cursor(dictionary=True)
+          cursor.execute("SELECT * FROM users WHERE email = %s AND password = %s", (email, password))
+          user = cursor.fetchone()
+          cursor.close()
+          conn.close()
+
+          if user:
+            session['username'] = user['name']
+            session['email'] = user['email']
+            return redirect(url_for('index'))
+          else:
+            return render_template('login.html', error='Sorry Invalid email or password')
+     return render_template('login.html')
+
+@app.route('/signup', methods=['GET', 'POST'])
+def signup():
+    if request.method == 'POST':
+        name = request.form['name']
+        email = request.form['email']
+        password = request.form['password']
+
+         # Check if the name is valid
+        if not is_valid_name(name):
+            return render_template('signup.html', error='Invalid name. Please enter a valid name.')
+        # Check if email already exists
+        conn = mysql.connector.connect(**mysql_config)
+        cursor = conn.cursor()
+        cursor.execute("SELECT * FROM users WHERE email = %s", (email,))
+        user = cursor.fetchone()
+        if user:
+            cursor.close()
+            conn.close()
+            return render_template('signup.html', error='Sorry!. his email already exists')
+
+        # Insert user into database
+        cursor.execute("INSERT INTO users (name, email, password) VALUES (%s, %s, %s, %s)", (name,email, password))
+        conn.commit()
+        cursor.close()
+        conn.close()
+
+        # session['username'] = name
+        return redirect(url_for('login'))
+    return render_template('signup.html')
+
+def is_valid_name(name):
+    # Add your validation logic here, for example:
+    # Name should contain only alphabets and spaces
+    return bool(re.match("^[a-zA-Z ]+$", name))
 
 @app.route("/predict", methods=['POST'])
 def predict():
