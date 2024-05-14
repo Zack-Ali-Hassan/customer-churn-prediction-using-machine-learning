@@ -48,20 +48,12 @@
                     <label for="exampleInputPassword1" class="form-label">Password</label>
                     <input type="password" class="form-control" id="password" name="password" placeholder = "Enter password" required>
                   </div>
-                  <!-- {% with messages = get_flashed_messages() %}
-                  {% if messages %}
-                      {% for message in messages %}
-                          <div class="alert alert-warning" role="alert">
-                              {{ message }}
-                          </div>
-                      {% endfor %}
-                  {% endif %}
-              {% endwith %} -->
-                  <button class="btn btn-info w-100 py-8 fs-0 fw-bold mb-4 rounded-2"
+                 
+                  <button class="btn btn-primary w-100 py-8 fs-0 fw-bold mb-4 rounded-2"
                   type="submit">Sign In</button>
-                  <div class="d-flex align-items-center justify-content-center">
+                  <div class="d-flex justify-content-between">
                     <p class="fs-0 mb-0 fw-bold">Already have an Account?</p>
-                    <a class="text-info fw-bold ms-2" href="{{ url_for('login') }}" >Log In</a>
+                    <a class="text-primary fw-bold ms-2" href="{{ url_for('login') }}" >Log In</a>
                   </div>
                 </form>
               </div>

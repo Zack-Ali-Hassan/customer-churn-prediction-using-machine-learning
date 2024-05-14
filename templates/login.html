@@ -48,7 +48,7 @@
                                         <input type="password" name="password" id="password" class="form-control"
                                             placeholder="Enter password" required>
                                     </div>
-                                    <div class="d-flex align-items-center justify-content-between mb-4">
+                                    <!-- <div class="d-flex align-items-center justify-content-between mb-4">
                                         <div class="form-check">
                                             <input class="form-check-input info" type="checkbox" value=""
                                                 id="flexCheckChecked" checked>
@@ -56,21 +56,12 @@
                                                 Remember me
                                             </label>
                                         </div>
-                                    </div>
-                                    <!-- {% with messages = get_flashed_messages() %}
-                                    {% if messages %}
-                                    {% for message in messages %}
-                                    <div class="alert alert-warning" role="alert">
-                                        {{ message }}
-                                    </div>
-                                    {% endfor %}
-                                    {% endif %}
-                                    {% endwith %} -->
-                                    <button class="btn btn-info w-100 py-8 fs-0 fw-bold mb-4 rounded-2"
+                                    </div> -->
+                                    <button class="btn btn-primary w-100 py-8 fs-0 fw-bold mb-4 rounded-2"
                                         type="submit">Log in</button>
                                     <div class="d-flex justify-content-between">
                                         <p class="fs-0 mb-0 fw-bold">I don't have an Account?</p>
-                                        <a class="text-info fw-bold ms-2" href="{{ url_for('signup') }}">Create an account</a>
+                                        <a class="text-primary fw-bold ms-2" href="{{ url_for('signup') }}">Create an account</a>
                                     </div>
                                 </form>
                             </div>

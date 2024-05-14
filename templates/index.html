@@ -45,6 +45,19 @@
           <li><a class="nav-link scrollto" href="#visualization">Visualization</a></li>
           <li><a class="nav-link scrollto" href="#project">Project</a></li>
           <li><a class="nav-link scrollto" href="#team">Team</a></li>
+          {% if 'username' in session %}
+          <li class="">
+            <a class="nav-link text-primary fw-bold" href="#">Welcome, {{ session['username'][0:15] }}..!</a>
+          </li>
+          <li class="">
+            <a class="nav-link text-danger fw-bold" href="{{ url_for('logout') }}"></i>
+              Logout</a>
+          </li>
+          {% else %}
+          <li class="nav-item">
+            <a class="nav-link text-primary scrollto fw-bold" href="{{ url_for('login') }}">Login</a>
+          </li>
+          {% endif %}
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
@@ -106,88 +119,85 @@
       </div>
     </section>
     <!-- ======= Visualization Section ======= -->
-    <section id="visualization" class="visualization visual-image-container">
-      <div id="carouselExampleIndicators" class="carousel slide">
-        <div class="carousel-indicators">
-          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
-            aria-current="true" aria-label="Slide 1"></button>
-          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
-            aria-label="Slide 2"></button>
-          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
-            aria-label="Slide 3"></button>
-          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3"
-            aria-label="Slide 4"></button>
-          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4"
-            aria-label="Slide 5"></button>
-          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="5"
-            aria-label="Slide 6"></button>
-          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="6"
-            aria-label="Slide 7"></button>
-          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="7"
-            aria-label="Slide 8"></button>
-          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="8"
-            aria-label="Slide 9"></button>
-          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="9"
-            aria-label="Slide 10"></button>
-          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="10"
-            aria-label="Slide 11"></button>
-        </div>
-        <div class="carousel-inner visual-image">
-          <div class="carousel-item active">
-            <img src="../static/img/visualization/Accuracy Comparison of Supervised ML Algorithms.png"
-              class="d-block w-100" alt="...">
-          </div>
-          <div class="carousel-item">
-            <img src="../static/img/visualization/logistic_regression_confusion_matrix.png" class="d-block w-100"
-              alt="...">
-          </div>
-          <div class="carousel-item">
-            <img src="../static/img/visualization/svm_confusion_matrix.png" class="d-block w-100" alt="...">
-          </div>
-          <div class="carousel-item">
-            <img src="../static/img/visualization/random_forest_confusion_matrix.png" class="d-block w-100" alt="...">
-          </div>
-          <div class="carousel-item">
-            <img src="../static/img/visualization/decision_tree_confusion_matrix.png" class="d-block w-100" alt="...">
-          </div>
-          <div class="carousel-item">
-            <img src="../static/img/visualization/Churn by Monthly Charges.png" class="d-block w-100" alt="...">
-          </div>
-          <div class="carousel-item">
-            <img src="../static/img/visualization/Churn by Total Charges.png" class="d-block w-100" alt="...">
-          </div>
-          <div class="carousel-item">
-            <img src="../static/img/visualization/gender.png" class="d-block w-100" alt="...">
-          </div>
-          <div class="carousel-item">
-            <img src="../static/img/visualization/Contract.png" class="d-block w-100" alt="...">
-          </div>
-          <div class="carousel-item">
-            <img src="../static/img/visualization/SeniorCitizen.png" class="d-block w-100" alt="...">
-          </div>
-          <div class="carousel-item">
-            <img src="../static/img/visualization/PaymentMethod.png" class="d-block w-100" alt="...">
-          </div>
-        </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
-          data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
-          data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
-        </button>
-      </div>
+    <section id="visualization" class="visualization section-bg">
       <div class="container" data-aos="fade-up">
-
-        <div class="row no-gutters">
-
-
-
+        <div class="section-title">
+          <h2>Visualization</h2>
+          <p>Customer churn prediction visualization images.</p>
         </div>
-
+        <div id="carouselExampleIndicators" class="carousel slide">
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+              aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+              aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+              aria-label="Slide 3"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3"
+              aria-label="Slide 4"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4"
+              aria-label="Slide 5"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="5"
+              aria-label="Slide 6"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="6"
+              aria-label="Slide 7"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="7"
+              aria-label="Slide 8"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="8"
+              aria-label="Slide 9"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="9"
+              aria-label="Slide 10"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="10"
+              aria-label="Slide 11"></button>
+          </div>
+          <div class="carousel-inner visual-image">
+            <div class="carousel-item active">
+              <img src="../static/img/visualization/Accuracy Comparison of Supervised ML Algorithms.png"
+                class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="../static/img/visualization/logistic_regression_confusion_matrix.png" class="d-block w-100"
+                alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="../static/img/visualization/svm_confusion_matrix.png" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="../static/img/visualization/random_forest_confusion_matrix.png" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="../static/img/visualization/decision_tree_confusion_matrix.png" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="../static/img/visualization/Churn by Monthly Charges.png" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="../static/img/visualization/Churn by Total Charges.png" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="../static/img/visualization/gender.png" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="../static/img/visualization/Contract.png" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="../static/img/visualization/SeniorCitizen.png" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="../static/img/visualization/PaymentMethod.png" class="d-block w-100" alt="...">
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
       </div>
     </section><!-- End About Section -->
 
@@ -216,12 +226,13 @@
                 <div class="col-lg-6 form-group">
                   <label for="" class="form-label mb-2">MonthlyCharges</label>
                   <input type="text" name="MonthlyCharges" class="form-control" id="MonthlyCharges"
-                    value="{{MonthlyCharges}}" step="any" placeholder="Monthly Charges" required oninput="validateInput(this)">
+                    value="{{MonthlyCharges}}" step="any" placeholder="Monthly Charges" required
+                    oninput="validateInput(this)">
                 </div>
                 <div class="col-lg-6 form-group">
                   <label for="" class="form-label mb-2">TotalCharges</label>
-                  <input type="text" name="TotalCharges" class="form-control" id="TotalCharges"
-                    value="{{TotalCharges}}" step="any" placeholder="Total Charges" required oninput="validateInput(this)">
+                  <input type="text" name="TotalCharges" class="form-control" id="TotalCharges" value="{{TotalCharges}}"
+                    step="any" placeholder="Total Charges" required oninput="validateInput(this)">
                 </div>
                 <div class="col-lg-6 form-group">
                   <label for="" class="form-label mb-2">Gender</label>
@@ -395,7 +406,6 @@
                   <a href=""><i class="bi bi-twitter"></i></a>
                   <a href=""><i class="bi bi-facebook"></i></a>
                   <a href=""><i class="bi bi-instagram"></i></a>
-                  <a href=""><i class="bi bi-linkedin"></i></a>
                 </div>
               </div>
               <div class="member-info">
@@ -413,7 +423,6 @@
                   <a href=""><i class="bi bi-twitter"></i></a>
                   <a href=""><i class="bi bi-facebook"></i></a>
                   <a href=""><i class="bi bi-instagram"></i></a>
-                  <a href=""><i class="bi bi-linkedin"></i></a>
                 </div>
               </div>
               <div class="member-info">
@@ -431,7 +440,6 @@
                   <a href=""><i class="bi bi-twitter"></i></a>
                   <a href=""><i class="bi bi-facebook"></i></a>
                   <a href=""><i class="bi bi-instagram"></i></a>
-                  <a href=""><i class="bi bi-linkedin"></i></a>
                 </div>
               </div>
               <div class="member-info">
@@ -449,7 +457,6 @@
                   <a href=""><i class="bi bi-twitter"></i></a>
                   <a href=""><i class="bi bi-facebook"></i></a>
                   <a href=""><i class="bi bi-instagram"></i></a>
-                  <a href=""><i class="bi bi-linkedin"></i></a>
                 </div>
               </div>
               <div class="member-info">
@@ -506,14 +513,13 @@
 
       <div class="me-md-auto text-center text-md-start">
 
-        <div class="credits">Developed by <a href="#hero">SOMTELCHURN</a>
+        <div class="credits">Developed by <a href="#hero">SOMTELCHURN?????????</a>
         </div>
       </div>
       <div class="social-links text-center text-md-end pt-3 pt-md-No">
         <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
         <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
         <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
-        <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
       </div>
     </div>
   </footer><!-- End Footer -->
@@ -521,7 +527,7 @@
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
       class="bi bi-arrow-up-short"></i></a>
 
-     
+
   <!-- Vendor JS Files -->
   <script src="{{ url_for('static', filename ='vendor/purecounter/purecounter_vanilla.js') }}"></script>
   <script src="{{ url_for('static', filename ='vendor/aos/aos.js') }}"></script>
@@ -533,7 +539,7 @@
   <!-- Template Main JS File -->
   <script src="{{ url_for('static', filename ='js/main.js') }}"></script>
   <script src="{{ url_for('static', filename ='js/valid.js') }}"></script>
- 
+
 </body>
 
 </html>

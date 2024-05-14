@@ -76,9 +76,13 @@ def signup():
     return render_template('register.html')
 
 def is_valid_name(name):
-    # Add your validation logic here, for example:
     # Name should contain only alphabets and spaces
     return bool(re.match("^[a-zA-Z ]+$", name))
+
+@app.route('/logout')
+def logout():
+    session.pop('username', None)
+    return redirect(url_for('login'))
 
 @app.route('/predict', methods=['GET', 'POST'])
 def predict():
