@@ -487,8 +487,8 @@ section {
 }
 /* Visualization */
 .visual-image img {
-  height: 900px; /* Fixed height for all images */
-  object-fit: cover; /* Cover the area without distorting aspect ratio */
+  height: 400px; /* Fixed height for all images */
+  /* object-fit: cover; Cover the area without distorting aspect ratio */
 }
 
 
@@ -962,4 +962,24 @@ section {
   background: #e03a3c;
   color: #fff;
   text-decoration: none;
+}
+
+#loadingSpinner {
+  display: none; /* Hidden by default */
+  position: fixed;
+  z-index: 999;
+  height: 2em;
+  width: 2em;
+  overflow: show;
+  margin: auto;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+
+/* Optional: Add animation and other styling as needed */
+.spinner-border {
+  width: 3rem;
+  height: 3rem;
 }

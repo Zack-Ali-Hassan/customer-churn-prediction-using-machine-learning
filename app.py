@@ -3,7 +3,7 @@ import mysql.connector
 import re
 import pandas as pd
 import pickle
-
+from flask import jsonify
 app =Flask(__name__)
 app.secret_key = "zxsdasdasdasdsd"
 
@@ -165,29 +165,10 @@ def predict():
         single = model.predict(new_df__dummies.tail(1))
         
         if single==1:
-            o1 = "This customer is churned!!."
+            result = "This customer is churned!!."
         else:
-            o1 = "This customer is not churn."
-        return render_template('index.html', output1=o1,  
-                           SeniorCitizen = request.form['SeniorCitizen'], 
-                           MonthlyCharges = request.form['MonthlyCharges'],
-                           TotalCharges = request.form['TotalCharges'],
-                           Gender = request.form['Gender'],
-                           Partner = request.form['Partner'], 
-                           Dependents = request.form['Dependents'], 
-                           PhoneService = request.form['PhoneService'], 
-                           MultipleLines = request.form['MultipleLines'], 
-                           InternetService = request.form['InternetService'], 
-                           OnlineSecurity = request.form['OnlineSecurity'], 
-                           OnlineBackup = request.form['OnlineBackup'], 
-                           DeviceProtection = request.form['DeviceProtection'], 
-                           TechSupport = request.form['TechSupport'], 
-                           StreamingTV = request.form['StreamingTV'], 
-                           StreamingMovies = request.form['StreamingMovies'], 
-                           Contract = request.form['Contract'], 
-                           PaperlessBilling = request.form['PaperlessBilling'],
-                           PaymentMethod = request.form['PaymentMethod'], 
-                           tenure = request.form['tenure'])
+            result = "This customer is not churn."
+        return jsonify(message=result)
     elif request.method == 'GET':
         
         return render_template('index.html')
