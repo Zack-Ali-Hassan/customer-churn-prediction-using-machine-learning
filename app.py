@@ -42,7 +42,7 @@ def login():
             session['email'] = user['email']
             return redirect(url_for('index'))
           else:
-            return render_template('login.html', error='Sorry Invalid email or password')
+            return render_template('login.html', error='Sorry Invalid email or password', email=email, password=password)
      return render_template('login.html')
 
 @app.route('/signup', methods=['GET', 'POST'])
@@ -52,9 +52,17 @@ def signup():
         email = request.form['email']
         password = request.form['password']
 
-         # Check if the name is valid
+        # Check if the name is valid
         if not is_valid_name(name):
-            return render_template('register.html', error='Invalid name. Please enter a valid name.')
+            return render_template('register.html', error='Invalid name. Please enter a valid name.', name=name, email=email, password=password)
+        # Check if the gmail is valid
+        if not is_gmail_address(email):
+            return render_template('register.html', error='Invalid gmail. Please enter a valid gmail.', name=name, email=email, password=password)
+        # Check if the password is strong
+        if not is_strong_password(password):
+            return render_template('register.html', error='Invalid password. Please enter a strong password.', name=name, email=email, password=password)
+        
+
         # Check if email already exists
         conn = mysql.connector.connect(**mysql_config)
         cursor = conn.cursor()
@@ -63,7 +71,7 @@ def signup():
         if user:
             cursor.close()
             conn.close()
-            return render_template('register.html', error='Sorry!. his email already exists')
+            return render_template('register.html', error='Sorry!. his email already exists', name=name, email=email, password=password)
 
         # Insert user into database
         cursor.execute("INSERT INTO users (name, email, password) VALUES (%s, %s, %s)", (name,email, password))
@@ -78,6 +86,24 @@ def signup():
 def is_valid_name(name):
     # Name should contain only alphabets and spaces
     return bool(re.match("^[a-zA-Z ]+$", name))
+
+
+def is_gmail_address(email):
+    # Check if the email ends with @gmail.com
+    return email.endswith("@gmail.com")
+
+
+def is_strong_password(password):
+    # Check for minimum length of 6, include upper, lower and digits
+    if len(password) < 6:
+        return False
+    if not re.search("[a-z]", password):
+        return False
+    if not re.search("[A-Z]", password):
+        return False
+    if not re.search("[0-9]", password):
+        return False
+    return True
 
 @app.route('/logout')
 def logout():
