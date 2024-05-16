@@ -38,15 +38,15 @@
                 <form method="post" action="{{ url_for('signup') }}">
                   <div class="mb-3">
                     <label for="exampleInputtext1" class="form-label">Full Name</label>
-                    <input type="text" class="form-control" id="name" name="name" aria-describedby="textHelp" placeholder ="Enter fullname" required>
+                    <input type="text" class="form-control" id="name" name="name" aria-describedby="textHelp" placeholder ="Enter fullname" value="{{ name }}" required>
                   </div>
                   <div class="mb-3">
                     <label for="exampleInputEmail1" class="form-label">Email</label>
-                    <input type="email" class="form-control" id="email" name="email" aria-describedby="emailHelp" placeholder="Enter email" required>
+                    <input type="email" class="form-control" id="email" name="email" aria-describedby="emailHelp" placeholder="Enter email" value="{{ email }}" required>
                   </div>
                   <div class="mb-4">
                     <label for="exampleInputPassword1" class="form-label">Password</label>
-                    <input type="password" class="form-control" id="password" name="password" placeholder = "Enter password" required>
+                    <input type="password" class="form-control" id="password" name="password" placeholder = "Enter password" value="{{ password }}" required>
                   </div>
                  
                   <button class="btn btn-primary w-100 py-8 fs-0 fw-bold mb-4 rounded-2"

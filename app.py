@@ -4,6 +4,7 @@ import re
 import pandas as pd
 import pickle
 from flask import jsonify
+
 app =Flask(__name__)
 app.secret_key = "zxsdasdasdasdsd"
 
@@ -43,7 +44,7 @@ def login():
             return redirect(url_for('index'))
           else:
             return render_template('login.html', error='Sorry Invalid email or password', email=email, password=password)
-     return render_template('login.html')
+     return render_template('login.html', email='', password='')
 
 @app.route('/signup', methods=['GET', 'POST'])
 def signup():
@@ -81,7 +82,7 @@ def signup():
 
         # session['username'] = name
         return redirect(url_for('login'))
-    return render_template('register.html')
+    return render_template('register.html', name='', email='', password='')
 
 def is_valid_name(name):
     # Name should contain only alphabets and spaces
